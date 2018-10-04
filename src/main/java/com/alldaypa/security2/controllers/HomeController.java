@@ -1,16 +1,19 @@
 package com.alldaypa.security2.controllers;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
 
-
-
-@RestController
+@Controller
 public class HomeController {
 
-    @GetMapping("/")
+    @RequestMapping("/")
     public String index(){
-        return "Home Page";
+        return "index";
+    }
+
+    @RequestMapping("/login")
+    public String login(){
+        return "login";
     }
 
 }
